@@ -244,6 +244,52 @@ describe('Fun and Interesting Unit Tests', function () {
         ];
         expect(csvToJson(csv)).to.deep.equal(customers);
     });
+/*13. Chicken vs Elephant:
+    Implement a function canChickenWinFight(chicken, elephant) 
+    that determines if a chicken can win a fight against an elephant based on certain conditions.
+    
+    * The chicken wins if:
+        - The chicken's bravery is greater than or equal to the elephant's strength.
+        - The elephant has a fearOfChickens set to true.
+    * Use the provided chicken and elephant objects to test the function:
+        - fierceChicken has high bravery and karate skills.
+        - gentleElephant has moderate strength but a fear of chickens.
+        - strongElephant has high strength and no fear of chickens.
+        
+    Tip: start implementation with a big smile on your face if you support cheering for the brave chicken
+    */
+    it('should determine if a chicken can win a fight against an elephant', function () {
+        const canChickenWinFight = (chicken, elephant) => {
+            // Write your implementation below
+if ((chicken.bravery >= elephant.strength) && (elephant.fearOfChickens == true)){
+    return true
+}
+else {
+    return false
+}
 
+        };
+
+        const fierceChicken = {
+            name: 'Clucky',
+            bravery: 10,
+            secretWeapon: 'karate skills'
+        };
+
+        const gentleElephant = {
+            name: 'Dumbo',
+            strength: 5,
+            fearOfChickens: true
+        };
+
+        const strongElephant = {
+            name: 'Goliath',
+            strength: 10,
+            fearOfChickens: false
+        };
+
+        expect(canChickenWinFight(fierceChicken, gentleElephant)).to.be.true;
+        expect(canChickenWinFight(fierceChicken, strongElephant)).to.be.false;
+    });
 
 });
