@@ -262,10 +262,10 @@ describe('Fun and Interesting Unit Tests', function () {
         const canChickenWinFight = (chicken, elephant) => {
             // Write your implementation below
 if ((chicken.bravery >= elephant.strength) && (elephant.fearOfChickens == true)){
-    return true
+    return true;
 }
 else {
-    return false
+    return false;
 }
 
         };
